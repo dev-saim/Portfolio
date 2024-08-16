@@ -8,7 +8,7 @@
 
 ![](./public/image/screen.png)
 
-## View live preview [here](https://chimerical-jelly-9395af.netlify.app/).
+## View live preview [here](https://66bf18f24e5489e8ee8cef10--saimasifportfolio.netlify.app/).
 
 ---
 
