@@ -22,7 +22,7 @@ function Footer() {
           <div className="flex items-center gap-5">
             <Link
               target="_blank"
-              href="https://www.linkedin.com/in/saim-asif-8181aa1aa"
+              href="https://github.com/dev-saim"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
               <IoStar />
