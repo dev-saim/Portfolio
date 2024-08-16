@@ -8,7 +8,7 @@
 
 ![](./public/image/screen.png)
 
-## View live preview [here](https://66bf1d21a07bafe528ff7d77--saimasifportfolios.netlify.app/).
+## View live preview [here](https://66bf1fd1d9e6acf00d739478--saimasifportfolio.netlify.app/).
 
 ---
 
