@@ -17,28 +17,28 @@ const projectsData = [
     description:
       "A spooky Halloween-themed website featuring animations and interactive elements to celebrate the holiday.",
     image: p1,
-    link: "https://66be0efc8b247d3cd272d963--joyful-youtiao-63205c.netlify.app/",
+    link: "https://ghoulishgreet.netlify.app/",
   },
   {
     title: "WebbyFrames Dashboard",
     description:
       "A modern and responsive admin dashboard with detailed analytics and intuitive user controls.",
     image: p5,
-    link: "https://chimerical-jelly-9395af.netlify.app/",
+    link: "https://webbycontrol.netlify.app/",
   },
   {
     title: "E-commerce Website",
     description:
       "An e-commerce app specializing in mobile accessories, featuring diverse products, intuitive search, and fast checkout.",
     image: p8,
-    link: "https://66be16e97eb1ff42f0761c26--incredible-frangipane-342298.netlify.app/",
+    link: "https://phoneessentialsstore.netlify.app/",
   },
   {
     title: "Blog Website",
     description:
       "A beautifully designed blog platform where users can publish, share, and read engaging content.",
     image: p7,
-    link: "https://funny-zabaione-f14a72.netlify.app",
+    link: "https://dailythoughtshub.netlify.app/",
   },
  
   {
@@ -46,14 +46,14 @@ const projectsData = [
     description:
       "A user-friendly login and signup page with seamless social media integration, ensuring quick and easy access to your account.",
     image: p9,
-    link: "https://66be19a61822e84951dc087c--starlit-chebakia-299e5b.netlify.app/",
+    link: "https://accesspoint.netlify.app/",
   },
   {
     title: "Dice Game",
     description:
       "A fun and simple dice game where users can roll the dice and test their luck against the odds.",
     image: p4,
-    link: "https://66be11347eb1ff3c15761baa--animated-zabaione-a336e9.netlify.app/",
+    link: "https://rollthedicefun.netlify.app/",
   },
 
   {
@@ -61,28 +61,36 @@ const projectsData = [
     description:
       "A fully-featured online store with product listings, shopping cart, and secure payment gateway.",
     image: p6,
-    link: "https://66be07c04026b2342a182f62--serene-cendol-347186.netlify.app",
+    link: "https://fashionfindshub.netlify.app/",
   },
   {
     title: "Enhance AI",
     description:
       "An AI-powered tool that enhances and sharpens images, delivering clearer and crisper visuals.",
     image: p3,
-    link: "https://66be0fdbfd76984186757ba3--vocal-belekoy-b10620.netlify.app/",
+    link: "https://enhanceaitech.netlify.app/",
   }, 
   {
     title: "ToDo List",
     description:
       "A sleek and efficient to-do list app designed for easy task management and productivity tracking.",
     image: p2,
-    link: "https://66be109caa25823e269f27b0--capable-sorbet-ee5a4c.netlify.app/",
+    link: "https://listifytasks.netlify.app/",
   },
+  {
+    title: "Email Template",
+    description:
+      "A sleek and efficient to-do list app designed for easy task management and productivity tracking.",
+    image: p9,
+    link: "https://maildesignhub.netlify.app/",
+  },
+  
 ];
 
 const ProjectCard = ({ project }) => {
   const handleCardClick = () => {
     if (project.link) {
-      window.open(project.link, "_blank"); // Open in a new tab
+      window.open(project.link, "_blank");
     }
   };
 
@@ -103,7 +111,6 @@ const ProjectCard = ({ project }) => {
           <p className="text-white text-sm text-justify px-4">
             {project.description}
           </p>
-          {/* Quick View Button */}
           <button
             onClick={handleCardClick}
             className="mt-4 px-5 py-3 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer"
