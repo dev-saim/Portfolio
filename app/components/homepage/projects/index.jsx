@@ -10,6 +10,7 @@ import p6 from "../../../../public/Projects/p6.png";
 import p7 from "../../../../public/Projects/p7.png";
 import p8 from "../../../../public/Projects/p8.png";
 import p9 from "../../../../public/Projects/p9.png";
+import p10 from "../../../../public/Projects/p10.png";
 
 const projectsData = [
   {
@@ -81,7 +82,7 @@ const projectsData = [
     title: "Email Template",
     description:
       "A sleek and efficient to-do list app designed for easy task management and productivity tracking.",
-    image: p9,
+    image: p10,
     link: "https://maildesignhub.netlify.app/",
   },
   
