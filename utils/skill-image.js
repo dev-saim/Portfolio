@@ -72,6 +72,7 @@ import vuetifyjs from '/public/svg/skills/vuetifyjs.svg';
 import webix from '/public/svg/skills/webix.svg';
 import wolframalpha from '/public/svg/skills/wolframalpha.svg';
 import wordpress from '/public/svg/skills/wordpress.svg';
+import webflow from '/public/svg/skills/webflow.svg';
 
 
 export const skillsImage = (skill) => {
@@ -123,6 +124,8 @@ export const skillsImage = (skill) => {
       return mongoDB;
     case 'mysql':
       return mysql;
+    case 'webflow':
+      return webflow;
     case 'postgresql':
       return postgresql;
     case 'tailwind':

@@ -11,6 +11,7 @@ import p7 from "../../../../public/Projects/p7.png";
 import p8 from "../../../../public/Projects/p8.png";
 import p9 from "../../../../public/Projects/p9.png";
 import p10 from "../../../../public/Projects/p10.png";
+import p11 from "../../../../public/Projects/p11.png";
 
 const projectsData = [
   {
@@ -19,6 +20,13 @@ const projectsData = [
       "A spooky Halloween-themed website featuring animations and interactive elements to celebrate the holiday.",
     image: p1,
     link: "https://ghoulishgreet.netlify.app/",
+  },
+   {
+    title: "Icarus",
+    description:
+      "A visually captivating landing page designed in Webflow, showcasing beautiful animations and a modern, aesthetic layout.",
+    image: p11,
+    link: "https://icarus-d7d07e.webflow.io/",
   },
   {
     title: "WebbyFrames Dashboard",

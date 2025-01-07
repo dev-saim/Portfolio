@@ -10,5 +10,6 @@ export const skillsData = [
   "Bootstrap",
   "MaterialUI",
   "Php",
-  "MySql"
+  "MySql",
+  "Webflow",
 ];

@@ -132,7 +132,7 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Material UI</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Balsamiq</span>
+                <span className="text-amber-300">Webflow CMS and Design Expert</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Team-Leader</span>
                 <span className="text-gray-400">{"'],"}</span>
