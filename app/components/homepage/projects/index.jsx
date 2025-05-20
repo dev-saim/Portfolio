@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import p1 from "../../../../public/Projects/p1.png";
 import p2 from "../../../../public/Projects/p2.png";
@@ -21,7 +21,7 @@ const projectsData = [
     image: p1,
     link: "https://ghoulishgreet.netlify.app/",
   },
-   {
+  {
     title: "Icarus",
     description:
       "A visually captivating landing page designed in Webflow, showcasing beautiful animations and a modern, aesthetic layout.",
@@ -49,7 +49,6 @@ const projectsData = [
     image: p7,
     link: "https://dailythoughtshub.netlify.app/",
   },
- 
   {
     title: "Login & Signup Page",
     description:
@@ -64,7 +63,6 @@ const projectsData = [
     image: p4,
     link: "https://rollthedicefun.netlify.app/",
   },
-
   {
     title: "E-commerce Website",
     description:
@@ -78,7 +76,7 @@ const projectsData = [
       "An AI-powered tool that enhances and sharpens images, delivering clearer and crisper visuals.",
     image: p3,
     link: "https://enhanceaitech.netlify.app/",
-  }, 
+  },
   {
     title: "ToDo List",
     description:
@@ -93,7 +91,6 @@ const projectsData = [
     image: p10,
     link: "https://maildesignhub.netlify.app/",
   },
-  
 ];
 
 const ProjectCard = ({ project }) => {
@@ -104,16 +101,14 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div
-      className="relative flex flex-col h-full bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl project-card cursor-default"
-    >
+    <div className="relative flex flex-col h-full bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
       <div className="relative h-80">
         <img
           src={project.image.src}
           alt={project.title}
-          className="w-full h-full object-contain transition-opacity duration-300"
+          className="w-full h-full object-contain transition-opacity duration-300 hover:opacity-30"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 overlay">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 p-4">
           <h3 className="text-xl font-semibold text-white mb-3 text-center">
             {project.title}
           </h3>
@@ -148,76 +143,19 @@ const Projects = () => {
     );
   };
 
-  useEffect(() => {
-    const css = `
-      .project-card {
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .project-card img {
-        transition: opacity 0.3s;
-      }
-
-      .project-card:hover img {
-        opacity: 0.3;
-      }
-
-      .project-card .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.8);
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .project-card:hover .overlay {
-        opacity: 1;
-      }
-
-      .project-card .overlay h3,
-      .project-card .overlay p {
-        color: white;
-      }
-
-      .project-card .overlay button {
-        border: 1px solid white;
-        background: transparent;
-        color: white;
-        transition: background-color 0.3s, color 0.3s;
-      }
-
-      .project-card .overlay button:hover {
-        background-color: white;
-        color: black;
-      }
-    `;
-
-    const style = document.createElement("style");
-    style.textContent = css;
-    document.head.append(style);
-
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
-
   return (
     <div id="projects" className="relative z-50 my-12 lg:my-24 px-4">
+      {/* Gradient circle */}
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
+      
+      {/* Divider */}
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
           <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
         </div>
       </div>
+      
+      {/* Header */}
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
@@ -228,7 +166,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Medium to Large devices: Grid layout */}
+      {/* Grid layout for medium+ devices */}
       <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData
           .slice(0, showAll ? projectsData.length : 6)
@@ -239,7 +177,7 @@ const Projects = () => {
           ))}
       </div>
 
-      {/* Small device: Carousel with buttons */}
+      {/* Carousel for small devices */}
       <div className="block md:hidden relative">
         <ProjectCard project={projectsData[currentIndex]} />
         <div className="absolute inset-y-0 left-0 flex items-center">
@@ -260,8 +198,8 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Load More / Show Less Button */}
-      <div className="flex justify-center mt-8 hidden md:flex">
+      {/* Show More/Less button */}
+      <div className="hidden md:flex justify-center mt-8">
         <button
           onClick={() => setShowAll(!showAll)}
           className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
