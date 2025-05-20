@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 function Navbar() {
+  // We can even remove the state and scroll listener since sticky is removed
+  /*
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -19,12 +21,11 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  */
 
   return (
     <nav
-      className={`transition-all w-full duration-300 ${
-        isSticky ? "sticky top-0 bg-[#0d1224] border-b border-gray-700" : "bg-transparent"
-      }`}
+      className={`transition-all w-full duration-300 bg-transparent`}
       style={{ zIndex: 1000 }}
     >
       <div className="flex w-full items-center justify-between py-5 px-4">
