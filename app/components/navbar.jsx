@@ -1,37 +1,24 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar() {
-  // We can even remove the state and scroll listener since sticky is removed
-  /*
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  */
-
   return (
     <nav
-      className={`transition-all w-full duration-300 bg-transparent`}
+      className="transition-all w-full duration-300 bg-transparent"
       style={{ zIndex: 1000 }}
     >
       <div className="flex w-full items-center justify-between py-5 px-4">
         <div className="flex flex-shrink-0 items-center">
-          <Link href="/" className="text-[#16f2b3] text-3xl font-bold">
-            Saim Asif
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/saim_logo2.png"
+              alt="Saim Asif Logo"
+              width={120}
+              height={44}
+              className="invert brightness-150" // <-- CSS inversion
+            />
           </Link>
         </div>
 
@@ -71,6 +58,7 @@ function Navbar() {
               </div>
             </a>
           </li>
+
           <li>
             <a
               className="block px-4 py-2 no-underline outline-none hover:no-underline"
